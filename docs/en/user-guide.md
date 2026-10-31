@@ -123,10 +123,27 @@ Each browser lets you change these shortcuts (Chrome: `chrome://extensions/short
 - **I made a mistake**: tap **Undo** right after the change.
 - **Go back to the original settings**: tap **Reset** at the bottom of the popup, then **Confirm?** within 3 seconds. Only the settings of the open tab are reset. To erase everything, including sites: *More settings > About > Reset everything*.
 
-## 7. Credits and licences
+## 7. Fonts in other apps (iPhone, iPad)
+
+The `lisible-polices-<version>.mobileconfig` profile (made by `npm run build`, in `dist/`) installs OpenDyslexic, Atkinson Hyperlegible, Lexend and Andika on the iPhone or iPad. They become available in apps that let you choose a font: Pages, Keynote, Numbers, Mail, Word…
+
+This profile is **not needed for Safari**: the extension already brings its fonts to web pages, and websites cannot use fonts installed by a profile.
+
+**Install**
+1. Send the file to the device: AirDrop from a Mac, email attachment, or download in Safari.
+2. Open it: iOS shows “Profile Downloaded”.
+3. Open *Settings*; tap **Profile Downloaded** at the top (or *Settings > General > VPN & Device Management*), then **Install** and enter the device passcode.
+
+iOS says the profile is **unsigned**: this is normal for a profile that does not come from a company or a store. It only contains fonts. They then appear in *Settings > General > Fonts*.
+
+**Remove**: *Settings > General > VPN & Device Management*, tap *Lisible – polices / fonts*, then **Remove Profile**. The fonts are removed with it.
+
+On a managed device (school, company), installing profiles may be blocked.
+
+## 8. Credits and licences
 
 In *More settings > About*, the **Credits and licences** section names the author of each bundled font. Tap a font's name to read its licence (SIL Open Font License 1.1).
 
-## 8. Privacy
+## 9. Privacy
 
 Lisible sends no data. Settings stay on your device, and the fonts are bundled with the extension (no downloads).

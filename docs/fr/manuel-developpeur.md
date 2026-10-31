@@ -23,11 +23,13 @@ extension/
   icons/               icônes de l'extension et de la barre d'outils
   _locales/fr|en/      textes de l'interface (fr par défaut)
 scripts/build.mjs      builds Chrome / Firefox / Safari + zips (dist/)
+scripts/profil-polices.mjs  profil iPhone / iPad qui installe les polices (dist/*.mobileconfig)
 scripts/captures.mjs   captures d'écran de la documentation (docs/images/)
 scripts/creer-projet-xcode.sh
 tests/                 node:test + Playwright
 LICENSE                PolyForm Noncommercial 1.0.0 (le code) ; polices sous OFL
 assets/app-icon-1024.png
+assets/polices-ios/    TTF / OTF originaux pour le profil de polices (sources dans son README)
 ```
 
 ## 2. Architecture
@@ -95,6 +97,7 @@ background.js ┘ (raccourcis)                                    (toutes les pa
 3. Déclarer la police dans `FONTS` (`shared/settings.js`) : `family` (préfixée par `Lisible ` pour éviter un conflit avec une police du site), `file`, `italic`, `fallback` et `author`. La licence doit s'appeler `fonts/licenses/<file>-OFL.txt` : la rubrique *Crédits et licences* de la page « Plus de réglages » la relie automatiquement.
 4. Ajouter un `@font-face` dans `shared/ui.css`, pour l'échantillon de police des interfaces.
 5. Vérifier la couverture des caractères français (`éèàçœ«»’…`), par exemple avec `fontTools`.
+6. Pour le profil iPhone / iPad, déposer les fichiers TTF / OTF originaux dans `assets/polices-ios/` et noter leur source dans son README.
 
 ## 5. Traductions
 
@@ -105,8 +108,10 @@ background.js ┘ (raccourcis)                                    (toutes les pa
 ## 6. Builds par navigateur
 
 ```bash
-npm run build            # ou : node scripts/build.mjs chrome|firefox|safari
+npm run build            # ou : node scripts/build.mjs chrome|firefox|safari|polices
 ```
+
+Le build produit aussi `dist/lisible-polices-<version>.mobileconfig`, un profil de configuration qui installe les polices sur iPhone et iPad pour les autres apps (voir le manuel utilisateur, partie 7). Il est construit à partir de `assets/polices-ios/` : un profil n'accepte que des TTF / OTF, pas les WOFF2 de l'extension. Le profil n'est pas signé ; ses UUID sont dérivés des noms de fichiers, donc stables d'un build à l'autre, et une nouvelle version remplace l'ancienne sur l'appareil.
 
 `extension/manifest.json` est le manifest de Safari ; le script en dérive les autres :
 

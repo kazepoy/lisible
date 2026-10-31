@@ -49,6 +49,7 @@ The Chrome build is tested automatically in Chromium, and the Firefox build is v
 | **Undo** | every change made in the popup can be undone |
 | **Preview** | sample text showing the settings live (in “More settings”; in the popup, the page itself is the preview) |
 | **Shortcuts (computer)** | `Alt+Shift+D` (`⌥⇧D` on Mac) turns Lisible on or off for the site, `Alt+Shift+R` (`⌥⇧R`) shows or hides the ruler |
+| **Fonts in apps (iPhone, iPad)** | a configuration profile installs the four fonts system-wide, for Pages, Keynote, Mail, Word… (not needed for Safari, see the [user guide](docs/en/user-guide.md#7-fonts-in-other-apps-iphone-ipad)) |
 | **Languages** | French and English |
 
 Every option has an “unchanged” value that leaves the page as it is. Code, formulas, SVG and icon fonts (Font Awesome, Material Icons…) keep their original font.
@@ -56,7 +57,7 @@ Every option has an “unchanged” value that leaves the page as it is. Code, f
 ## Quick start (developers)
 
 ```bash
-npm run build                                          # dist/chrome, dist/firefox, dist/safari + zips
+npm run build                                          # dist/chrome, dist/firefox, dist/safari + zips, iOS font profile
 npm test                                               # tests (Node 22, Playwright + Chromium)
 npm run lint:firefox                                   # Mozilla validation of the Firefox build
 ./scripts/creer-projet-xcode.sh com.mydomain.lisible   # Safari: on a Mac with Xcode
@@ -105,6 +106,6 @@ The code is under the [PolyForm Noncommercial 1.0.0](LICENSE) licence: anyone ma
 
 ## Font licences
 
-OpenDyslexic, Atkinson Hyperlegible, Lexend and Andika are distributed under the **SIL Open Font License 1.1** (see `extension/fonts/licenses/`). The files come from the npm packages `@fontsource/*` 5.3.0. The “More settings” page credits them under *About > Credits and licences*.
+OpenDyslexic, Atkinson Hyperlegible, Lexend and Andika are distributed under the **SIL Open Font License 1.1** (see `extension/fonts/licenses/`). The files come from the npm packages `@fontsource/*` 5.3.0. The “More settings” page credits them under *About > Credits and licences*. The iPhone / iPad font profile uses the original, unmodified TTF / OTF files instead (see `assets/polices-ios/README.md`).
 
 To be checked: OpenDyslexic has a Reserved Font Name. The Fontsource files are converted to WOFF2 and reduced to Latin characters; it remains to be confirmed that this is not a “Modified Version” under the licence, or the author's original files should be used.

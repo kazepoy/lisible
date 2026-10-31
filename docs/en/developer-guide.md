@@ -23,11 +23,13 @@ extension/
   icons/               extension and toolbar icons
   _locales/fr|en/      UI strings (French by default)
 scripts/build.mjs      Chrome / Firefox / Safari builds + zips (dist/)
+scripts/profil-polices.mjs  iPhone / iPad profile that installs the fonts (dist/*.mobileconfig)
 scripts/captures.mjs   documentation screenshots (docs/images/)
 scripts/creer-projet-xcode.sh
 tests/                 node:test + Playwright
 LICENSE                PolyForm Noncommercial 1.0.0 (code); fonts under OFL
 assets/app-icon-1024.png
+assets/polices-ios/    original TTF / OTF files for the font profile (sources in its README)
 ```
 
 ## 2. Architecture
@@ -95,6 +97,7 @@ background.js ┘ (shortcuts)                                      (every page a
 3. Declare the font in `FONTS` (`shared/settings.js`): `family` (prefixed with `Lisible ` to avoid clashing with a site's font), `file`, `italic`, `fallback` and `author`. The licence must be named `fonts/licenses/<file>-OFL.txt`: the *Credits and licences* section of the “More settings” page links it automatically.
 4. Add an `@font-face` to `shared/ui.css` for the font sample in the UI pages.
 5. Check coverage of French characters (`éèàçœ«»’…`), for example with `fontTools`.
+6. For the iPhone / iPad profile, put the original TTF / OTF files in `assets/polices-ios/` and record their source in its README.
 
 ## 5. Translations
 
@@ -105,8 +108,10 @@ background.js ┘ (shortcuts)                                      (every page a
 ## 6. Per-browser builds
 
 ```bash
-npm run build            # or: node scripts/build.mjs chrome|firefox|safari
+npm run build            # or: node scripts/build.mjs chrome|firefox|safari|polices
 ```
+
+The build also makes `dist/lisible-polices-<version>.mobileconfig`, a configuration profile that installs the fonts on iPhone and iPad for other apps (see the user guide, part 7). It is built from `assets/polices-ios/`: a profile only accepts TTF / OTF, not the extension's WOFF2 files. The profile is unsigned; its UUIDs are derived from the file names, so they stay the same from one build to the next, and a new version replaces the old one on the device.
 
 `extension/manifest.json` is Safari's manifest; the script derives the others from it:
 

@@ -49,6 +49,7 @@ Le build Chrome est testé automatiquement dans Chromium, et le build Firefox es
 | **Annuler** | chaque changement fait dans la popup peut être annulé |
 | **Aperçu** | texte d'exemple qui applique les réglages en direct (dans « Plus de réglages » ; dans la popup, c'est la page elle-même qui sert d'aperçu) |
 | **Raccourcis (ordinateur)** | `Alt+Maj+D` (`⌥⇧D` sur Mac) active ou désactive Lisible sur le site, `Alt+Maj+R` (`⌥⇧R`) affiche ou masque la règle |
+| **Polices dans les apps (iPhone, iPad)** | un profil de configuration installe les quatre polices dans le système, pour Pages, Keynote, Mail, Word… (inutile pour Safari, voir le [manuel utilisateur](docs/fr/manuel-utilisateur.md#7-les-polices-dans-les-autres-apps-iphone-ipad)) |
 | **Langues** | français et anglais |
 
 Chaque option a une valeur « celle du site » qui laisse la page inchangée. Le code, les formules, les SVG et les polices d'icônes (Font Awesome, Material Icons…) gardent leur police d'origine.
@@ -56,7 +57,7 @@ Chaque option a une valeur « celle du site » qui laisse la page inchangée. Le
 ## Démarrage rapide (développeurs)
 
 ```bash
-npm run build                                          # dist/chrome, dist/firefox, dist/safari + zips
+npm run build                                          # dist/chrome, dist/firefox, dist/safari + zips, profil de polices iOS
 npm test                                               # tests (Node 22, Playwright + Chromium)
 npm run lint:firefox                                   # validation Mozilla du build Firefox
 ./scripts/creer-projet-xcode.sh fr.mondomaine.lisible  # Safari : sur un Mac avec Xcode
@@ -105,6 +106,6 @@ Le code est sous licence [PolyForm Noncommercial 1.0.0](LICENSE) : chacun peut l
 
 ## Licences des polices
 
-OpenDyslexic, Atkinson Hyperlegible, Lexend et Andika sont distribuées sous **SIL Open Font License 1.1** (voir `extension/fonts/licenses/`). Les fichiers proviennent des paquets npm `@fontsource/*` 5.3.0. La page « Plus de réglages » les crédite dans sa rubrique *À propos > Crédits et licences*.
+OpenDyslexic, Atkinson Hyperlegible, Lexend et Andika sont distribuées sous **SIL Open Font License 1.1** (voir `extension/fonts/licenses/`). Les fichiers proviennent des paquets npm `@fontsource/*` 5.3.0. La page « Plus de réglages » les crédite dans sa rubrique *À propos > Crédits et licences*. Le profil de polices iPhone / iPad utilise, lui, les fichiers TTF / OTF originaux non modifiés (voir `assets/polices-ios/README.md`).
 
 Point à vérifier : OpenDyslexic a un nom réservé (« Reserved Font Name »). Les fichiers Fontsource sont convertis en WOFF2 et réduits aux caractères latins ; il reste à confirmer que cela ne constitue pas une « version modifiée » au sens de la licence, ou à utiliser les fichiers originaux de l'autrice.

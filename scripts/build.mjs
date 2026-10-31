@@ -2,17 +2,20 @@
 /*
  * Construit l'extension pour chaque navigateur à partir du dossier extension/.
  *
- *   node scripts/build.mjs            # chrome, firefox et safari
+ *   node scripts/build.mjs            # chrome, firefox, safari et profil de polices
  *   node scripts/build.mjs chrome     # un seul navigateur
+ *   node scripts/build.mjs polices    # profil de polices iPhone / iPad seulement
  *
- * Produit dist/<navigateur>/ (dossier à charger « non empaqueté » pour tester)
- * et dist/lisible-<navigateur>-<version>.zip (fichier à envoyer au store).
+ * Produit dist/<navigateur>/ (dossier à charger « non empaqueté » pour tester),
+ * dist/lisible-<navigateur>-<version>.zip (fichier à envoyer au store) et
+ * dist/lisible-polices-<version>.mobileconfig (polices pour les apps iPhone / iPad).
  * Aucune dépendance : Node 18 ou plus suffit.
  */
 import { cpSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { deflateRawSync } from 'node:zlib';
+import { fontProfile } from './profil-polices.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = join(ROOT, 'extension');
@@ -61,6 +64,14 @@ function build(target) {
   const zipPath = join(DIST, `lisible-${target}-${result.version}.zip`);
   writeFileSync(zipPath, zip(out));
   console.log(`${target.padEnd(8)} → ${relative(ROOT, out)}/  +  ${relative(ROOT, zipPath)}`);
+}
+
+function buildFontProfile() {
+  const { version } = JSON.parse(readFileSync(join(SRC, 'manifest.json'), 'utf8'));
+  const out = join(DIST, `lisible-polices-${version}.mobileconfig`);
+  mkdirSync(DIST, { recursive: true });
+  writeFileSync(out, fontProfile(join(ROOT, 'assets', 'polices-ios'), version));
+  console.log(`${'polices'.padEnd(8)} → ${relative(ROOT, out)}`);
 }
 
 // ---- Écriture d'un zip (méthode deflate), sans dépendance ---------------------
@@ -144,9 +155,13 @@ function zip(dir) {
 // ---- Point d'entrée -----------------------------------------------------------
 
 const asked = process.argv.slice(2);
-const unknown = asked.filter((t) => !TARGETS[t]);
+const choices = [...Object.keys(TARGETS), 'polices'];
+const unknown = asked.filter((t) => !choices.includes(t));
 if (unknown.length) {
-  console.error(`Navigateur inconnu : ${unknown.join(', ')} (choix : ${Object.keys(TARGETS).join(', ')})`);
+  console.error(`Cible inconnue : ${unknown.join(', ')} (choix : ${choices.join(', ')})`);
   process.exit(1);
 }
-for (const target of asked.length ? asked : Object.keys(TARGETS)) build(target);
+for (const target of asked.length ? asked : choices) {
+  if (target === 'polices') buildFontProfile();
+  else build(target);
+}

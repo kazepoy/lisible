@@ -123,10 +123,27 @@ Chaque navigateur permet de changer ces raccourcis (Chrome : `chrome://extension
 - **Je me suis trompé** : touchez **Annuler** juste après le changement.
 - **Revenir aux réglages d'origine** : touchez **Réinitialiser** en bas de la popup, puis **Confirmer ?** dans les 3 secondes. Seuls les réglages de l'onglet ouvert sont réinitialisés. Pour tout effacer, y compris les sites : *Plus de réglages > À propos > Tout réinitialiser*.
 
-## 7. Crédits et licences
+## 7. Les polices dans les autres apps (iPhone, iPad)
+
+Le profil `lisible-polices-<version>.mobileconfig` (produit par `npm run build`, dans `dist/`) installe OpenDyslexic, Atkinson Hyperlegible, Lexend et Andika sur l'iPhone ou l'iPad. Elles deviennent disponibles dans les apps qui permettent de choisir une police : Pages, Keynote, Numbers, Mail, Word…
+
+Ce profil n'est **pas nécessaire pour Safari** : l'extension apporte déjà ses polices aux pages web, et les sites n'ont pas accès aux polices installées par un profil.
+
+**Installer**
+1. Envoyez le fichier sur l'appareil : AirDrop depuis un Mac, pièce jointe d'un e-mail, ou téléchargement dans Safari.
+2. Ouvrez-le : iOS affiche « Profil téléchargé ».
+3. Ouvrez *Réglages* ; touchez **Profil téléchargé** en haut (ou *Réglages > Général > VPN et gestion de l'appareil*), puis **Installer** et saisissez le code de l'appareil.
+
+iOS indique que le profil est **non signé** : c'est normal pour un profil qui ne vient pas d'une entreprise ou d'un store. Il ne contient que des polices. Elles apparaissent ensuite dans *Réglages > Général > Polices*.
+
+**Retirer** : *Réglages > Général > VPN et gestion de l'appareil*, touchez *Lisible – polices / fonts*, puis **Supprimer le profil**. Les polices sont retirées avec lui.
+
+Sur un appareil géré (école, entreprise), l'installation de profils peut être bloquée.
+
+## 8. Crédits et licences
 
 Dans *Plus de réglages > À propos*, la rubrique **Crédits et licences** indique l'auteur de chaque police incluse. Touchez le nom d'une police pour lire sa licence (SIL Open Font License 1.1).
 
-## 8. Confidentialité
+## 9. Confidentialité
 
 Lisible n'envoie aucune donnée. Les réglages restent sur votre appareil, et les polices sont incluses dans l'extension (aucun téléchargement).
