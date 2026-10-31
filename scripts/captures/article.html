@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+  <meta charset="utf-8">
+  <title>{{title}}</title>
+  <!-- Page de démonstration pour les captures d'écran : un article « ordinaire » (serif, justifié, italique). -->
+  <style>
+    body { font-family: Georgia, "Times New Roman", serif; background: #fff; color: #222; margin: 0; font-size: 16px; line-height: 1.35; }
+    header { background: #1f3a5f; color: #fff; padding: 12px 32px; display: flex; gap: 24px; align-items: baseline; }
+    header strong { font-size: 20px; }
+    header a { color: #cfe0f5; text-decoration: none; font-size: 14px; }
+    article { padding: 8px 32px 40px; }
+    h1 { font-size: 28px; margin: 18px 0 4px; }
+    .meta { color: #777; font-size: 13px; margin: 0 0 14px; }
+    p { text-align: justify; margin: 0 0 6px; }
+    blockquote { margin: 12px 0; padding: 4px 16px; border-left: 4px solid #1f3a5f; color: #444; font-style: italic; }
+    a { color: #1a5bb5; }
+  </style>
+</head>
+<body>
+  <header><strong>{{site}}</strong><a href="#">{{nav1}}</a><a href="#">{{nav2}}</a><a href="#">{{nav3}}</a></header>
+  <article>
+    <h1>{{h1}}</h1>
+    <p class="meta">{{meta}}</p>
+    {{body}}
+  </article>
+</body>
+</html>

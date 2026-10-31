@@ -4,6 +4,8 @@
 
 Lisible changes how web pages look to make them easier to read: font, spacing, colours and a reading ruler. Pages are not changed on the server, only how they are displayed for you.
 
+![The same web page without Lisible, then with the recommended values](../images/en/before-after.png)
+
 ## 1. Install and enable the extension
 
 Lisible works with:
@@ -45,6 +47,8 @@ Changes apply straight away to the open page. After each change, an **Undo** but
 
 ### The popup (simple settings)
 
+<img src="../images/en/popup.png" alt="The popup on the All sites tab" width="320">
+
 From top to bottom:
 
 1. **Header**: the main switch, which turns Lisible on or off everywhere.
@@ -78,15 +82,28 @@ It opens in a tab and holds every fine-grained setting:
 
 **To get started**, choose *Extra wide* spacing in the popup, or the **Apply recommended values** button on the “More settings” page (wider spacing, 70-character lines, cream background, no italics). Then adjust to your liking: everyone reads differently.
 
+![The “More settings” page: reading ruler, site selector and preview](../images/en/options.png)
+
+### The reading ruler
+
+It follows the mouse pointer, or your finger on phones and tablets. In *band* mode it highlights the line being read with a colour; in *mask* mode it darkens the rest of the page.
+
+![The reading ruler as a band and as a mask](../images/en/ruler.png)
+
 ## 4. Per-site settings
 
 Lisible applies to all sites. For a particular site, open the **📍 site tab** in the popup; it is purple so that it is never confused with the shared settings:
+
+<img src="../images/en/popup-site.png" alt="The popup on the site tab, in purple, with settings for this site only" width="320">
+
 
 - **Lisible on this site**: untick to see this site as it is (useful for a site that displays badly).
 - **Customise for this site**: creates settings for this site only, starting from a copy of the shared settings. Other sites are not affected.
 - **Go back to the settings of all sites**: deletes the site's own settings.
 
 When the open site has its own settings, the popup opens directly on its tab. All special sites are listed in **More settings > My sites**.
+
+![The My sites list: one site turned off, two with their own settings](../images/en/options-sites.png)
 
 ## 5. Keyboard shortcuts (computer)
 

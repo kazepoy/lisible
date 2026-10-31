@@ -3,6 +3,8 @@
 *English · [Français](README.fr.md)*
 
 A browser extension for **Safari, Chrome, Edge and Firefox**, on **computers, tablets and phones**, that makes the web more comfortable to read for people with dyslexia: suitable fonts, spacing, colours and a reading ruler, with settings shared by all sites and per-site exceptions.
+
+![The same web page without Lisible, then with the recommended values: OpenDyslexic font, wider spacing, shorter lines, cream background](docs/images/en/before-after.png)
  
 ## Compatibility
 
@@ -24,6 +26,13 @@ The Chrome build is tested automatically in Chromium, and the Firefox build is v
 - [Developer guide](docs/en/developer-guide.md): architecture, adding a setting or a font, tests, building and publishing.
 
 ## Features
+
+<p>
+  <img src="docs/images/en/popup.png" alt="The popup: main switch, reading ruler, All sites tab with font, text size, spacing and background" width="300">
+  <img src="docs/images/en/popup-site.png" alt="The popup on the site tab, in purple: settings for this site only" width="300">
+</p>
+
+![The reading ruler, as a coloured band or as a mask that darkens the rest of the page](docs/images/en/ruler.png)
 
 | | |
 |---|---|

@@ -3,6 +3,8 @@
 *[English](README.md) · Français*
 
 Extension de navigateur pour **Safari, Chrome, Edge et Firefox**, sur **ordinateur, tablette et téléphone**, qui rend le web plus confortable à lire pour les personnes dyslexiques : police adaptée, espacements, couleurs, règle de lecture, avec des réglages communs à tous les sites et des exceptions par site.
+
+![La même page web sans Lisible, puis avec les valeurs conseillées : police OpenDyslexic, espacements élargis, lignes plus courtes, fond crème](docs/images/fr/before-after.png)
  
 ## Compatibilité
 
@@ -24,6 +26,13 @@ Le build Chrome est testé automatiquement dans Chromium, et le build Firefox es
 - [Manuel développeur](docs/fr/manuel-developpeur.md) : architecture, ajout d'un réglage ou d'une police, tests, compilation et publication.
 
 ## Fonctionnalités
+
+<p>
+  <img src="docs/images/fr/popup.png" alt="La popup : interrupteur général, règle de lecture, onglet Tous les sites avec police, taille, espacement et fond" width="300">
+  <img src="docs/images/fr/popup-site.png" alt="La popup sur l'onglet du site, en violet : réglages propres à ce site" width="300">
+</p>
+
+![La règle de lecture, en bande colorée ou en masque qui assombrit le reste de la page](docs/images/fr/ruler.png)
 
 | | |
 |---|---|

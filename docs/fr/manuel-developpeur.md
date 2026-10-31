@@ -23,6 +23,7 @@ extension/
   icons/               icônes de l'extension et de la barre d'outils
   _locales/fr|en/      textes de l'interface (fr par défaut)
 scripts/build.mjs      builds Chrome / Firefox / Safari + zips (dist/)
+scripts/captures.mjs   captures d'écran de la documentation (docs/images/)
 scripts/creer-projet-xcode.sh
 tests/                 node:test + Playwright
 LICENSE                PolyForm Noncommercial 1.0.0 (le code) ; polices sous OFL
@@ -131,6 +132,7 @@ Différences gérées dans le code :
 npm test              # unitaires + bout en bout + build Chrome réel
 npm run test:unit     # unitaires seulement (Node seul)
 npm run lint:firefox  # validation du build Firefox par l'outil de Mozilla
+npm run captures      # régénère les captures d'écran de docs/images/ (fr et en)
 ```
 
 - `tests/chrome.test.js` construit `dist/chrome` et le **charge réellement dans Chromium** : service worker, content script, polices et popup, avec les vraies API d'extension.

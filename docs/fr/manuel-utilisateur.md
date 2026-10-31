@@ -4,6 +4,8 @@
 
 Lisible change l'apparence des pages web pour les rendre plus faciles à lire : police, espacements, couleurs et règle de lecture. Les pages ne sont pas modifiées sur le serveur, seulement leur affichage chez vous.
 
+![La même page web sans Lisible, puis avec les valeurs conseillées](../images/fr/before-after.png)
+
 ## 1. Installer et activer l'extension
 
 Lisible fonctionne avec :
@@ -45,6 +47,8 @@ Les modifications s'appliquent tout de suite à la page ouverte. Après chaque c
 
 ### La popup (réglages simples)
 
+<img src="../images/fr/popup.png" alt="La popup sur l'onglet Tous les sites" width="320">
+
 De haut en bas :
 
 1. **En-tête** : l'interrupteur général, qui active ou désactive Lisible partout.
@@ -78,15 +82,28 @@ Elle s'ouvre dans un onglet et contient tous les réglages fins :
 
 **Pour bien démarrer**, choisissez l'espacement *Très large* dans la popup, ou le bouton **Appliquer les valeurs conseillées** de la page « Plus de réglages » (espacements élargis, lignes de 70 caractères, fond crème, sans italique). Ajustez ensuite à votre goût : chacun lit différemment.
 
+![La page « Plus de réglages » : règle de lecture, choix du site modifié et aperçu](../images/fr/options.png)
+
+### La règle de lecture
+
+Elle suit le pointeur de la souris, ou le doigt sur téléphone et tablette. En mode *bande*, elle colore la ligne lue ; en mode *masque*, elle assombrit le reste de la page.
+
+![La règle de lecture en bande et en masque](../images/fr/ruler.png)
+
 ## 4. Réglages par site
 
 Lisible s'applique à tous les sites. Pour un site particulier, ouvrez l'onglet **📍 du site** dans la popup ; il est en violet pour qu'on ne le confonde pas avec les réglages communs :
+
+<img src="../images/fr/popup-site.png" alt="La popup sur l'onglet du site, en violet, avec des réglages propres à ce site" width="320">
+
 
 - **Lisible sur ce site** : décochez pour voir ce site tel quel (utile pour un site qui s'affiche mal).
 - **Personnaliser pour ce site** : crée des réglages propres à ce site, en partant d'une copie des réglages communs. Ils ne changent rien aux autres sites.
 - **Revenir aux réglages de tous les sites** : supprime les réglages propres du site.
 
 Quand le site ouvert a ses propres réglages, la popup s'ouvre directement sur son onglet. Tous les sites particuliers sont listés dans **Plus de réglages > Mes sites**.
+
+![La liste Mes sites : un site désactivé, deux avec leurs propres réglages](../images/fr/options-sites.png)
 
 ## 5. Raccourcis clavier (ordinateur)
 
