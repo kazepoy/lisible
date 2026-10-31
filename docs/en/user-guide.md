@@ -123,22 +123,58 @@ Each browser lets you change these shortcuts (Chrome: `chrome://extensions/short
 - **I made a mistake**: tap **Undo** right after the change.
 - **Go back to the original settings**: tap **Reset** at the bottom of the popup, then **Confirm?** within 3 seconds. Only the settings of the open tab are reset. To erase everything, including sites: *More settings > About > Reset everything*.
 
-## 7. Fonts in other apps (iPhone, iPad)
+## 7. Install the fonts for other apps (iPhone, iPad, Mac)
 
-The `lisible-polices-<version>.mobileconfig` profile (made by `npm run build`, in `dist/`) installs OpenDyslexic, Atkinson Hyperlegible, Lexend and Andika on the iPhone or iPad. They become available in apps that let you choose a font: Pages, Keynote, Numbers, Mail, Word…
+Lisible can also install its four fonts (OpenDyslexic, Atkinson Hyperlegible, Lexend and Andika) system-wide. You can then choose them in apps that let you change the font: Pages, Keynote, Numbers, Mail, Word, TextEdit…
 
-This profile is **not needed for Safari**: the extension already brings its fonts to web pages, and websites cannot use fonts installed by a profile.
+> **Not needed to read the web.** The extension already brings its fonts to web pages, in Safari, Chrome and Firefox. This installation is only for other apps.
 
-**Install**
-1. Send the file to the device: AirDrop from a Mac, email attachment, or download in Safari.
-2. Open it: iOS shows “Profile Downloaded”.
-3. Open *Settings*; tap **Profile Downloaded** at the top (or *Settings > General > VPN & Device Management*), then **Install** and enter the device passcode.
+Everything is in a single file, the **font profile** `lisible-polices-<version>.mobileconfig`. It is made by `npm run build` in the `dist/` folder and works on iPhone, iPad and Mac.
 
-iOS says the profile is **unsigned**: this is normal for a profile that does not come from a company or a store. It only contains fonts. They then appear in *Settings > General > Fonts*.
+### On iPhone and iPad
 
-**Remove**: *Settings > General > VPN & Device Management*, tap *Lisible – polices / fonts*, then **Remove Profile**. The fonts are removed with it.
+1. **Send the file to the device**, either:
+   - by **AirDrop** from a Mac;
+   - as an **email attachment**, opened in the Mail app;
+   - by **downloading it in Safari** (Safari asks you to allow downloading a profile: tap *Allow*).
+2. iOS shows **“Profile Downloaded”**. Tap *Close*.
+3. Open the **Settings** app. Tap **Profile Downloaded**, just below your name.
+   If that row is not there: *Settings > General > VPN & Device Management*, then the *Lisible – polices / fonts* profile.
+4. Tap **Install** (top right), enter the device **passcode**, then tap **Install** twice more.
+5. Tap **Done**. The fonts are listed in *Settings > General > Fonts*.
 
-On a managed device (school, company), installing profiles may be blocked.
+Good to know:
+- **Do step 3 promptly**: a profile that is downloaded but not installed is deleted after a few minutes. Just start again from step 1.
+- iOS says the profile is **“Unsigned”** or **“Not Verified”**: this is normal for a profile that does not come from a company or a store. It only contains fonts and gives no access to your data.
+- On a managed device (school, company), installing profiles may be blocked: ask the administrator.
+
+**Remove the fonts**: *Settings > General > VPN & Device Management*, tap *Lisible – polices / fonts*, then **Remove Profile**.
+
+### On Mac
+
+**With the profile** (a single file, handy for several Macs):
+1. Double-click `lisible-polices-<version>.mobileconfig`. macOS says the profile has been downloaded.
+2. Open **System Settings**:
+   - macOS 15 and later: *General > Device Management*;
+   - macOS 13 and 14: *Privacy & Security > Profiles* (at the very bottom);
+   - macOS 12 and earlier: *System Preferences > Profiles*.
+3. Double-click *Lisible – polices / fonts*, click **Install**, then enter the Mac's password.
+
+To remove the fonts, select the profile in the same place and click **−** (Remove).
+
+**Without the profile, with Font Book** (no warning, no trip to Settings):
+1. Open the project's `assets/polices-ios/` folder, which holds the `.otf` and `.ttf` files.
+2. Select them all, double-click, then click **Install** in Font Book.
+
+To remove a font: in **Font Book**, select it, then *File > Remove*.
+
+### Choose the font in an app
+
+The fonts are called **OpenDyslexic**, **Atkinson Hyperlegible**, **Lexend** and **Andika** in font menus. For example:
+- **Pages, Keynote, Numbers** (iPhone, iPad): select some text, tap the paintbrush, then the font name.
+- **Pages, TextEdit, Word** (Mac): *Format > Font* menu, or the font list in the toolbar.
+
+If a font does not show up, quit the app completely and open it again.
 
 ## 8. Credits and licences
 

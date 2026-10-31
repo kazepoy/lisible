@@ -49,7 +49,7 @@ The Chrome build is tested automatically in Chromium, and the Firefox build is v
 | **Undo** | every change made in the popup can be undone |
 | **Preview** | sample text showing the settings live (in “More settings”; in the popup, the page itself is the preview) |
 | **Shortcuts (computer)** | `Alt+Shift+D` (`⌥⇧D` on Mac) turns Lisible on or off for the site, `Alt+Shift+R` (`⌥⇧R`) shows or hides the ruler |
-| **Fonts in apps (iPhone, iPad)** | a configuration profile installs the four fonts system-wide, for Pages, Keynote, Mail, Word… (not needed for Safari, see the [user guide](docs/en/user-guide.md#7-fonts-in-other-apps-iphone-ipad)) |
+| **Fonts in apps (iPhone, iPad, Mac)** | a configuration profile installs the four fonts system-wide, for Pages, Keynote, Mail, Word… (not needed to read the web, see the [user guide](docs/en/user-guide.md#7-install-the-fonts-for-other-apps-iphone-ipad-mac)) |
 | **Languages** | French and English |
 
 Every option has an “unchanged” value that leaves the page as it is. Code, formulas, SVG and icon fonts (Font Awesome, Material Icons…) keep their original font.

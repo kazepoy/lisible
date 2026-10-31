@@ -49,7 +49,7 @@ Le build Chrome est testé automatiquement dans Chromium, et le build Firefox es
 | **Annuler** | chaque changement fait dans la popup peut être annulé |
 | **Aperçu** | texte d'exemple qui applique les réglages en direct (dans « Plus de réglages » ; dans la popup, c'est la page elle-même qui sert d'aperçu) |
 | **Raccourcis (ordinateur)** | `Alt+Maj+D` (`⌥⇧D` sur Mac) active ou désactive Lisible sur le site, `Alt+Maj+R` (`⌥⇧R`) affiche ou masque la règle |
-| **Polices dans les apps (iPhone, iPad)** | un profil de configuration installe les quatre polices dans le système, pour Pages, Keynote, Mail, Word… (inutile pour Safari, voir le [manuel utilisateur](docs/fr/manuel-utilisateur.md#7-les-polices-dans-les-autres-apps-iphone-ipad)) |
+| **Polices dans les apps (iPhone, iPad, Mac)** | un profil de configuration installe les quatre polices dans le système, pour Pages, Keynote, Mail, Word… (inutile pour lire le web, voir le [manuel utilisateur](docs/fr/manuel-utilisateur.md#7-installer-les-polices-dans-les-autres-apps-iphone-ipad-mac)) |
 | **Langues** | français et anglais |
 
 Chaque option a une valeur « celle du site » qui laisse la page inchangée. Le code, les formules, les SVG et les polices d'icônes (Font Awesome, Material Icons…) gardent leur police d'origine.

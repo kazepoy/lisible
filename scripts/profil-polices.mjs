@@ -1,5 +1,5 @@
 /*
- * Profil de configuration iPhone / iPad (.mobileconfig) qui installe les polices de
+ * Profil de configuration iPhone / iPad / Mac (.mobileconfig) qui installe les polices de
  * Lisible dans le système, pour les utiliser dans les autres apps (Pages, Keynote,
  * Word, Mail…). L'extension Safari n'en a pas besoin : elle embarque ses polices.
  *

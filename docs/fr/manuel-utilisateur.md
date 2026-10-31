@@ -123,22 +123,58 @@ Chaque navigateur permet de changer ces raccourcis (Chrome : `chrome://extension
 - **Je me suis trompé** : touchez **Annuler** juste après le changement.
 - **Revenir aux réglages d'origine** : touchez **Réinitialiser** en bas de la popup, puis **Confirmer ?** dans les 3 secondes. Seuls les réglages de l'onglet ouvert sont réinitialisés. Pour tout effacer, y compris les sites : *Plus de réglages > À propos > Tout réinitialiser*.
 
-## 7. Les polices dans les autres apps (iPhone, iPad)
+## 7. Installer les polices dans les autres apps (iPhone, iPad, Mac)
 
-Le profil `lisible-polices-<version>.mobileconfig` (produit par `npm run build`, dans `dist/`) installe OpenDyslexic, Atkinson Hyperlegible, Lexend et Andika sur l'iPhone ou l'iPad. Elles deviennent disponibles dans les apps qui permettent de choisir une police : Pages, Keynote, Numbers, Mail, Word…
+Lisible peut aussi installer ses quatre polices (OpenDyslexic, Atkinson Hyperlegible, Lexend et Andika) dans le système. Vous pouvez alors les choisir dans les apps qui permettent de changer de police : Pages, Keynote, Numbers, Mail, Word, TextEdit…
 
-Ce profil n'est **pas nécessaire pour Safari** : l'extension apporte déjà ses polices aux pages web, et les sites n'ont pas accès aux polices installées par un profil.
+> **Inutile pour lire le web.** L'extension apporte déjà ses polices aux pages, dans Safari, Chrome et Firefox. Cette installation ne sert que pour les autres apps.
 
-**Installer**
-1. Envoyez le fichier sur l'appareil : AirDrop depuis un Mac, pièce jointe d'un e-mail, ou téléchargement dans Safari.
-2. Ouvrez-le : iOS affiche « Profil téléchargé ».
-3. Ouvrez *Réglages* ; touchez **Profil téléchargé** en haut (ou *Réglages > Général > VPN et gestion de l'appareil*), puis **Installer** et saisissez le code de l'appareil.
+Tout se trouve dans un seul fichier, le **profil de polices** `lisible-polices-<version>.mobileconfig`. Il est produit par `npm run build` dans le dossier `dist/` et fonctionne sur iPhone, iPad et Mac.
 
-iOS indique que le profil est **non signé** : c'est normal pour un profil qui ne vient pas d'une entreprise ou d'un store. Il ne contient que des polices. Elles apparaissent ensuite dans *Réglages > Général > Polices*.
+### Sur iPhone et iPad
 
-**Retirer** : *Réglages > Général > VPN et gestion de l'appareil*, touchez *Lisible – polices / fonts*, puis **Supprimer le profil**. Les polices sont retirées avec lui.
+1. **Envoyez le fichier sur l'appareil**, au choix :
+   - par **AirDrop** depuis un Mac ;
+   - en **pièce jointe d'un e-mail**, ouverte dans l'app Mail ;
+   - en le **téléchargeant dans Safari** (Safari demande d'autoriser le téléchargement d'un profil : touchez *Autoriser*).
+2. iOS affiche **« Profil téléchargé »**. Touchez *Fermer*.
+3. Ouvrez l'app **Réglages**. Touchez **Profil téléchargé**, juste sous votre nom.
+   Si cette ligne n'apparaît pas : *Réglages > Général > VPN et gestion de l'appareil*, puis le profil *Lisible – polices / fonts*.
+4. Touchez **Installer** (en haut à droite), saisissez le **code** de l'appareil, puis touchez encore **Installer** deux fois.
+5. Touchez **OK**. Les polices sont listées dans *Réglages > Général > Polices*.
 
-Sur un appareil géré (école, entreprise), l'installation de profils peut être bloquée.
+À savoir :
+- **Faites l'étape 3 rapidement** : un profil téléchargé mais pas installé est effacé au bout de quelques minutes. Il suffit alors de recommencer à l'étape 1.
+- iOS indique que le profil est **« Non signé »** ou **« Non vérifié »** : c'est normal pour un profil qui ne vient pas d'une entreprise ou d'un store. Il ne contient que des polices et ne donne aucun accès à vos données.
+- Sur un appareil géré (école, entreprise), l'installation de profils peut être bloquée : demandez à l'administrateur.
+
+**Retirer les polices** : *Réglages > Général > VPN et gestion de l'appareil*, touchez *Lisible – polices / fonts*, puis **Supprimer le profil**.
+
+### Sur Mac
+
+**Avec le profil** (un seul fichier, pratique pour plusieurs Mac) :
+1. Double-cliquez sur `lisible-polices-<version>.mobileconfig`. macOS indique que le profil a été téléchargé.
+2. Ouvrez **Réglages Système** :
+   - macOS 15 et plus : *Général > Gestion des appareils* ;
+   - macOS 13 et 14 : *Confidentialité et sécurité > Profils* (tout en bas) ;
+   - macOS 12 et avant : *Préférences Système > Profils*.
+3. Double-cliquez sur *Lisible – polices / fonts*, cliquez sur **Installer**, puis saisissez le mot de passe du Mac.
+
+Pour retirer les polices, sélectionnez le profil au même endroit et cliquez sur **−** (Supprimer).
+
+**Sans profil, avec le Livre des polices** (pas d'avertissement, pas de passage par les Réglages) :
+1. Ouvrez le dossier `assets/polices-ios/` du projet, qui contient les fichiers `.otf` et `.ttf`.
+2. Sélectionnez-les tous, double-cliquez, puis cliquez sur **Installer** dans le Livre des polices.
+
+Pour retirer une police : dans le **Livre des polices**, sélectionnez-la, puis *Fichier > Supprimer*.
+
+### Choisir la police dans une app
+
+Les polices s'appellent **OpenDyslexic**, **Atkinson Hyperlegible**, **Lexend** et **Andika** dans les menus de police. Par exemple :
+- **Pages, Keynote, Numbers** (iPhone, iPad) : sélectionnez du texte, touchez le pinceau, puis le nom de la police.
+- **Pages, TextEdit, Word** (Mac) : menu *Format > Police*, ou la liste des polices de la barre d'outils.
+
+Si une police n'apparaît pas, quittez complètement l'app et rouvrez-la.
 
 ## 8. Crédits et licences
 

@@ -1,6 +1,6 @@
-# Polices du profil iPhone / iPad
+# Polices du profil iPhone / iPad / Mac
 
-Fichiers TTF / OTF **originaux** (non modifiés) intégrés par `npm run build` dans `dist/lisible-polices-<version>.mobileconfig`. Un profil de configuration n'accepte pas le format WOFF2 de l'extension.
+Fichiers TTF / OTF **originaux** (non modifiés) intégrés par `npm run build` dans `dist/lisible-polices-<version>.mobileconfig`. Un profil de configuration n'accepte pas le format WOFF2 de l'extension. Sur Mac, on peut aussi installer ces fichiers directement avec le Livre des polices.
 
 Toutes sont sous **SIL Open Font License 1.1** ; les textes de licence sont dans `extension/fonts/licenses/`, et chaque fichier contient aussi sa licence dans ses métadonnées.
 
