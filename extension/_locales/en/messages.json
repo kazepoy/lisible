@@ -1,0 +1,380 @@
+{
+  "alignCenter": {
+    "message": "Centred"
+  },
+  "alignJustify": {
+    "message": "Justified"
+  },
+  "alignLeft": {
+    "message": "Left"
+  },
+  "alignRight": {
+    "message": "Right"
+  },
+  "background": {
+    "message": "Background"
+  },
+  "bgCustom": {
+    "message": "Colours chosen in “More settings”."
+  },
+  "bigger": {
+    "message": "Bigger"
+  },
+  "caseCapitalize": {
+    "message": "Capital First Letters"
+  },
+  "caseLower": {
+    "message": "all lowercase"
+  },
+  "caseUpper": {
+    "message": "ALL CAPITALS"
+  },
+  "chars": {
+    "message": "characters"
+  },
+  "cmdToggleRuler": {
+    "message": "show / hide the reading ruler"
+  },
+  "cmdToggleSite": {
+    "message": "turn on / off for this site"
+  },
+  "colActions": {
+    "message": "Actions"
+  },
+  "colLisible": {
+    "message": "Lisible"
+  },
+  "colSettings": {
+    "message": "Settings"
+  },
+  "colSite": {
+    "message": "Site"
+  },
+  "colorBg": {
+    "message": "Background"
+  },
+  "colorLink": {
+    "message": "Links"
+  },
+  "colorText": {
+    "message": "Text"
+  },
+  "creditsIntro": {
+    "message": "The bundled fonts are distributed under the SIL Open Font License 1.1."
+  },
+  "default": {
+    "message": "unchanged"
+  },
+  "edit": {
+    "message": "Edit"
+  },
+  "editing": {
+    "message": "You are editing:"
+  },
+  "editingGlobalHintSites": {
+    "message": "Sites with their own settings are not affected."
+  },
+  "editingSiteHint": {
+    "message": "These settings only apply to this site."
+  },
+  "extDescription": {
+    "message": "Dyslexia-friendly fonts, spacing, colours and a reading ruler on every website."
+  },
+  "extName": {
+    "message": "Lisible"
+  },
+  "font": {
+    "message": "Font"
+  },
+  "fontNone": {
+    "message": "Site font"
+  },
+  "fontScale": {
+    "message": "Text size"
+  },
+  "fontWeight": {
+    "message": "Letter thickness"
+  },
+  "globalNote": {
+    "message": "has its own settings: what you change here does not affect this page."
+  },
+  "letterSpacing": {
+    "message": "Between letters"
+  },
+  "lineHeight": {
+    "message": "Between lines"
+  },
+  "lineWidth": {
+    "message": "Maximum line length"
+  },
+  "linkHighlight": {
+    "message": "Highlight links"
+  },
+  "linkHighlightColor": {
+    "message": "Highlight colour"
+  },
+  "linkOutline": {
+    "message": "Outline links"
+  },
+  "masterOff": {
+    "message": "Off everywhere"
+  },
+  "masterOn": {
+    "message": "On"
+  },
+  "masterSwitch": {
+    "message": "Turn Lisible on everywhere"
+  },
+  "moreSettings": {
+    "message": "More settings"
+  },
+  "noItalic": {
+    "message": "Remove italics"
+  },
+  "noSite": {
+    "message": "Unsupported page"
+  },
+  "optDefault": {
+    "message": "Unchanged"
+  },
+  "optionsSubtitle": {
+    "message": "settings"
+  },
+  "optionsTitle": {
+    "message": "Lisible — settings"
+  },
+  "paragraphSpacing": {
+    "message": "Between paragraphs"
+  },
+  "previewItalic": {
+    "message": "Italic text"
+  },
+  "previewLink": {
+    "message": "a link"
+  },
+  "previewText1": {
+    "message": "The cat sleeps in the sun by the window. It dreams of long walks in the garden."
+  },
+  "previewText2": {
+    "message": "Similar letters: b d p q — 6 9 — on, no."
+  },
+  "recommended": {
+    "message": "Apply recommended values"
+  },
+  "recommendedHint": {
+    "message": "Recommended values: wider spacing, 70-character lines, cream background, no italics. The font is kept."
+  },
+  "remove": {
+    "message": "Remove"
+  },
+  "removeHint": {
+    "message": "This site will follow the settings of all sites again."
+  },
+  "reset": {
+    "message": "Reset"
+  },
+  "resetAll": {
+    "message": "Reset everything (including sites)"
+  },
+  "resetAllConfirm": {
+    "message": "Confirm: erase everything?"
+  },
+  "resetConfirm": {
+    "message": "Confirm?"
+  },
+  "resetTarget": {
+    "message": "Reset these settings"
+  },
+  "rulerBand": {
+    "message": "Band"
+  },
+  "rulerColor": {
+    "message": "Band colour"
+  },
+  "rulerHeight": {
+    "message": "Height"
+  },
+  "rulerHint": {
+    "message": "Shared by all sites. It follows the pointer, or your finger on phones and tablets."
+  },
+  "rulerMask": {
+    "message": "Mask"
+  },
+  "rulerMode": {
+    "message": "Type"
+  },
+  "rulerOpacity": {
+    "message": "Opacity"
+  },
+  "rulerSettings": {
+    "message": "Ruler settings"
+  },
+  "sectionAbout": {
+    "message": "About"
+  },
+  "sectionColors": {
+    "message": "Colours and links"
+  },
+  "sectionCredits": {
+    "message": "Credits and licences"
+  },
+  "sectionPreview": {
+    "message": "Preview"
+  },
+  "sectionRuler": {
+    "message": "Reading ruler"
+  },
+  "sectionSites": {
+    "message": "My sites"
+  },
+  "sectionSpacing": {
+    "message": "Spacing"
+  },
+  "sectionText": {
+    "message": "Text and font"
+  },
+  "settingsCommon": {
+    "message": "Shared"
+  },
+  "settingsOwn": {
+    "message": "Site's own"
+  },
+  "shortcuts": {
+    "message": "Keyboard shortcuts (computer)"
+  },
+  "siteCustomize": {
+    "message": "Customise for this site"
+  },
+  "siteCustomizeShort": {
+    "message": "Customise"
+  },
+  "siteEnabled": {
+    "message": "Lisible on this site"
+  },
+  "siteFollowsGlobal": {
+    "message": "This site uses the settings of all sites."
+  },
+  "siteOffHint": {
+    "message": "Lisible is off on this site: it is shown as it is."
+  },
+  "siteOnHint": {
+    "message": "Turn off to see this site as it is."
+  },
+  "siteOnTitle": {
+    "message": "Lisible on"
+  },
+  "siteOwnHint": {
+    "message": "These settings only apply to this site."
+  },
+  "siteOwnTitle": {
+    "message": "Settings for"
+  },
+  "siteRevert": {
+    "message": "Go back to the settings of all sites"
+  },
+  "sitesEmpty": {
+    "message": "No special sites yet. Use the site tab in the popup to add one."
+  },
+  "sitesHint": {
+    "message": "Lisible applies to all sites. Here are those that are turned off or have their own settings."
+  },
+  "smaller": {
+    "message": "Smaller"
+  },
+  "spacing": {
+    "message": "Spacing"
+  },
+  "spacingCustom": {
+    "message": "Spacing fine-tuned in “More settings”."
+  },
+  "spacingLarge": {
+    "message": "Wide"
+  },
+  "spacingLevel": {
+    "message": "Level"
+  },
+  "spacingLevelHint": {
+    "message": "The level sets the first four sliders at once; adjust them afterwards if needed."
+  },
+  "spacingNormal": {
+    "message": "Normal"
+  },
+  "spacingXLarge": {
+    "message": "Extra wide"
+  },
+  "tabGlobal": {
+    "message": "All sites"
+  },
+  "textAlign": {
+    "message": "Alignment"
+  },
+  "textCase": {
+    "message": "Upper / lower case"
+  },
+  "theme_blue": {
+    "message": "Pale blue"
+  },
+  "theme_cream": {
+    "message": "Cream"
+  },
+  "theme_custom": {
+    "message": "Custom"
+  },
+  "theme_dark": {
+    "message": "Dark"
+  },
+  "theme_green": {
+    "message": "Pale green"
+  },
+  "theme_grey": {
+    "message": "Grey"
+  },
+  "theme_none": {
+    "message": "Site colours"
+  },
+  "theme_pink": {
+    "message": "Pale pink"
+  },
+  "theme_yellow": {
+    "message": "Pale yellow"
+  },
+  "toastChanged": {
+    "message": "Setting changed"
+  },
+  "toastCustomized": {
+    "message": "Site settings created"
+  },
+  "toastOff": {
+    "message": "Lisible turned off everywhere"
+  },
+  "toastOn": {
+    "message": "Lisible turned on"
+  },
+  "toastReset": {
+    "message": "Default settings restored"
+  },
+  "toastReverted": {
+    "message": "This site follows the settings of all sites"
+  },
+  "toastSiteOff": {
+    "message": "Turned off for this site"
+  },
+  "toastSiteOn": {
+    "message": "Turned on for this site"
+  },
+  "undo": {
+    "message": "Undo"
+  },
+  "version": {
+    "message": "Version"
+  },
+  "weightBold": {
+    "message": "Bold"
+  },
+  "weightNormal": {
+    "message": "Normal"
+  },
+  "wordSpacing": {
+    "message": "Between words"
+  }
+}

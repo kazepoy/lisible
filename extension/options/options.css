@@ -1,0 +1,90 @@
+/* Page « Plus de réglages » : barre latérale sur grand écran, onglets défilants sur petit écran. */
+
+body { font-size: 16px; }
+
+.bar {
+  position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 12px;
+  padding: 12px 20px; background: var(--card); border-bottom: 1px solid var(--line);
+}
+.bar img { border-radius: 8px; }
+.bar h1 { margin: 0; font-size: 20px; }
+.bar h1 .sub { font-weight: 400; color: var(--muted); }
+.bar .state { flex: 1; text-align: right; color: var(--muted); font-size: 14px; }
+
+.layout { display: flex; max-width: 1040px; margin: 0 auto; }
+.side { position: sticky; top: 61px; align-self: flex-start; width: 220px; padding: 20px 12px; display: flex; flex-direction: column; gap: 2px; }
+.side a { padding: 9px 12px; border-radius: 8px; color: var(--text); text-decoration: none; font-weight: 500; }
+.side a:hover { background: color-mix(in srgb, var(--global) 12%, transparent); color: var(--global); }
+
+main { flex: 1; min-width: 0; padding: 20px; display: flex; flex-direction: column; gap: 14px; }
+
+.card { padding: 16px 18px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; scroll-margin-top: 140px; }
+.card h2 { margin: 0 0 10px; font-size: 18px; }
+.card h3 { margin: 16px 0 6px; font-size: 15px; }
+.card .head { display: flex; align-items: center; justify-content: space-between; }
+.card .head h2 { margin: 0; }
+
+.row { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 48px; }
+.row.top { align-items: flex-start; padding-top: 6px; }
+.row > :first-child { font-weight: 600; }
+.row select { min-width: 220px; }
+
+/* Règle de lecture : commune, toujours en bleu */
+.ruler-card { --accent: var(--global); }
+
+/* Qui est modifié */
+.target-bar {
+  position: sticky; top: 61px; z-index: 4; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px;
+  padding: 10px 14px; border-radius: 12px; background: color-mix(in srgb, var(--global) 10%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--global) 35%, transparent);
+}
+.target-bar label { font-weight: 700; }
+.target-bar select { min-width: 220px; font-weight: 600; }
+.editing-site .target-bar { background: var(--site-bg); border-color: var(--site-line); }
+.editing-site .target-bar label, .editing-site .target-bar select { color: var(--site); }
+.editing-site main .card:not(.ruler-card):not(#sites):not(#about) { border-left: 5px solid var(--site); }
+
+.preview-card .pv { font-size: 17px; }
+
+.customs { display: none; gap: 16px; margin: 10px 0; }
+.customs.show { display: flex; flex-wrap: wrap; }
+.customs label { display: flex; align-items: center; gap: 6px; }
+
+.actions-card { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.actions-card .hint { flex-basis: 100%; }
+
+/* Mes sites */
+table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+th, td { padding: 10px 8px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: middle; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+td.host { font-weight: 600; word-break: break-all; }
+td.actions { text-align: right; white-space: nowrap; }
+td.actions button + button { margin-left: 8px; }
+.badge { display: inline-block; padding: 2px 9px; border-radius: 99px; font-size: 13px; font-weight: 600; }
+.badge.own { background: var(--site-bg); color: var(--site); }
+.badge.common { background: var(--bg); color: var(--muted); }
+button.remove { color: var(--danger); }
+.empty { color: var(--muted); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+kbd { padding: 1px 6px; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px; font: 13px ui-monospace, monospace; }
+#about ul { padding-left: 20px; }
+#about li { margin: 4px 0; }
+#about a { color: var(--global); }
+
+/* Petits écrans (téléphone, tablette en portrait) */
+@media (max-width: 760px) {
+  .layout { display: block; }
+  .side {
+    position: sticky; top: 57px; z-index: 4; width: auto; flex-direction: row; overflow-x: auto;
+    padding: 8px 12px; background: var(--bg); border-bottom: 1px solid var(--line);
+  }
+  .side a { white-space: nowrap; background: var(--card); border: 1px solid var(--line); }
+  .bar { padding: 10px 14px; }
+  .bar .state { display: none; }
+  main { padding: 12px; }
+  .target-bar { top: 112px; }
+  .row { flex-wrap: wrap; }
+  .row select { min-width: 0; width: 100%; }
+  th:nth-child(3), td:nth-child(3) { display: none; }
+}

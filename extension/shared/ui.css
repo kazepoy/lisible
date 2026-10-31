@@ -1,0 +1,132 @@
+/* Styles communs à la popup et à la page « Plus de réglages ». */
+
+@font-face { font-family: "Lisible OpenDyslexic"; src: url("../fonts/opendyslexic-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Lisible Atkinson Hyperlegible"; src: url("../fonts/atkinson-hyperlegible-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Lisible Lexend"; src: url("../fonts/lexend-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Lisible Andika"; src: url("../fonts/andika-latin-400-normal.woff2") format("woff2"); }
+
+:root {
+  color-scheme: light dark;
+  --bg: #f2f2f5;
+  --card: #ffffff;
+  --text: #1c1c1e;
+  --muted: #62626b;
+  --line: #dcdce2;
+  --global: #2f6fde;
+  --site: #7a3fd1;
+  --site-bg: #f3ecfd;
+  --site-line: #d8c6f5;
+  --danger: #b3261e;
+  --accent: var(--global);
+  --on-accent: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1c1e;
+    --card: #2c2c2e;
+    --text: #f2f2f7;
+    --muted: #a6a6ae;
+    --line: #3d3d40;
+    --global: #5b8ff0;
+    --site: #b28cf2;
+    --site-bg: #2e2440;
+    --site-line: #4e3b70;
+    --danger: #ff6b5e;
+    --on-accent: #111111;
+  }
+}
+
+/* Modification des réglages d'un site : toute l'interface passe en violet. */
+.editing-site { --accent: var(--site); }
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--text); font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif; }
+
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.hint { margin: 4px 0 0; font-size: 13px; color: var(--muted); }
+
+/* Boutons */
+button.link { padding: 6px 2px; border: 0; background: none; color: var(--accent); font-weight: 600; cursor: pointer; min-height: 32px; }
+button.link.muted { color: var(--muted); font-weight: 500; }
+button.link.confirm, button.danger.confirm { color: #fff; background: var(--danger); border-radius: 8px; padding: 6px 12px; }
+button.primary {
+  min-height: 44px; padding: 10px 16px; border: 0; border-radius: 10px;
+  background: var(--accent); color: var(--on-accent); font-weight: 600; cursor: pointer;
+}
+button.primary.site { background: var(--site); }
+button.secondary {
+  min-height: 40px; padding: 8px 14px; border: 1px solid var(--accent); border-radius: 10px;
+  background: none; color: var(--accent); font-weight: 600; cursor: pointer;
+}
+button.danger { min-height: 40px; padding: 8px 14px; border: 1px solid var(--danger); border-radius: 10px; background: none; color: var(--danger); font-weight: 600; cursor: pointer; }
+
+/* Interrupteur */
+.switch { position: relative; display: inline-block; width: 50px; height: 30px; flex: none; }
+.switch.small { width: 44px; height: 26px; }
+.switch input { position: absolute; inset: 0; margin: 0; opacity: 0; cursor: pointer; z-index: 1; }
+.switch span { position: absolute; inset: 0; border-radius: 99px; background: #b9b9c0; transition: background .15s; }
+.switch span::after {
+  content: ""; position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; border-radius: 50%;
+  background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.3); transition: transform .15s;
+}
+.switch.small span::after { width: 20px; height: 20px; }
+.switch input:checked + span { background: var(--global); }
+.switch.site input:checked + span { background: var(--site); }
+.switch input:checked + span::after { transform: translateX(20px); }
+.switch.small input:checked + span::after { transform: translateX(18px); }
+.switch input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Choix segmentés */
+.segmented { display: inline-flex; border: 1px solid var(--line); border-radius: 9px; overflow: hidden; background: var(--card); }
+.segmented label { position: relative; }
+.segmented input { position: absolute; opacity: 0; }
+.segmented span { display: block; padding: 7px 11px; cursor: pointer; font-size: 14px; white-space: nowrap; min-height: 34px; }
+.segmented label + label span { border-left: 1px solid var(--line); }
+.segmented input:checked + span { background: var(--accent); color: var(--on-accent); font-weight: 600; }
+.segmented input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+/* Curseurs */
+.slider { display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; margin: 10px 0; }
+.slider input { grid-column: 1 / -1; width: 100%; accent-color: var(--accent); }
+.slider output { grid-row: 1; grid-column: 2; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* Listes */
+select {
+  min-height: 36px; padding: 5px 8px; border: 1px solid var(--line); border-radius: 8px;
+  background: var(--card); color: var(--text); font: inherit;
+}
+
+/* Pastilles de fond */
+.swatches { display: flex; flex-wrap: wrap; gap: 8px; }
+.swatch { position: relative; }
+.swatch input { position: absolute; opacity: 0; }
+.swatch span {
+  display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%;
+  border: 1px solid #b0b0b8; cursor: pointer; font-size: 12px; font-weight: 600;
+}
+.swatch span.none { background: linear-gradient(135deg, #fff 45%, #d33 46%, #d33 54%, #fff 55%); color: #444; }
+.swatch input:checked + span { outline: 3px solid var(--accent); outline-offset: 2px; }
+.swatch input:focus-visible + span { outline: 3px dashed var(--accent); outline-offset: 2px; }
+
+input[type="color"] { width: 40px; height: 32px; padding: 0; border: 1px solid var(--line); border-radius: 8px; background: none; cursor: pointer; }
+
+.check { display: flex; align-items: center; gap: 10px; min-height: 36px; cursor: pointer; }
+.check input { width: 18px; height: 18px; accent-color: var(--accent); }
+
+.font-sample {
+  margin: 0; padding: 6px 10px; border-radius: 8px; background: var(--bg);
+  font-size: 18px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+}
+
+.dim { opacity: .45; }
+
+/* Aperçu */
+.pv { padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); color: var(--text); font-size: 16px; line-height: 1.4; }
+.pv p { margin: 0 0 6px; }
+.pv p:last-child { margin-bottom: 0; }
+.pv a { color: var(--global); }

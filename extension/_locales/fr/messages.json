@@ -1,0 +1,380 @@
+{
+  "alignCenter": {
+    "message": "Centré"
+  },
+  "alignJustify": {
+    "message": "Justifié"
+  },
+  "alignLeft": {
+    "message": "À gauche"
+  },
+  "alignRight": {
+    "message": "À droite"
+  },
+  "background": {
+    "message": "Fond"
+  },
+  "bgCustom": {
+    "message": "Couleurs choisies dans « Plus de réglages »."
+  },
+  "bigger": {
+    "message": "Plus grand"
+  },
+  "caseCapitalize": {
+    "message": "Première Lettre En Majuscule"
+  },
+  "caseLower": {
+    "message": "tout en minuscules"
+  },
+  "caseUpper": {
+    "message": "TOUT EN MAJUSCULES"
+  },
+  "chars": {
+    "message": "caractères"
+  },
+  "cmdToggleRuler": {
+    "message": "afficher / masquer la règle de lecture"
+  },
+  "cmdToggleSite": {
+    "message": "activer / désactiver sur ce site"
+  },
+  "colActions": {
+    "message": "Actions"
+  },
+  "colLisible": {
+    "message": "Lisible"
+  },
+  "colSettings": {
+    "message": "Réglages"
+  },
+  "colSite": {
+    "message": "Site"
+  },
+  "colorBg": {
+    "message": "Fond"
+  },
+  "colorLink": {
+    "message": "Liens"
+  },
+  "colorText": {
+    "message": "Texte"
+  },
+  "creditsIntro": {
+    "message": "Les polices incluses sont distribuées sous SIL Open Font License 1.1."
+  },
+  "default": {
+    "message": "inchangé"
+  },
+  "edit": {
+    "message": "Modifier"
+  },
+  "editing": {
+    "message": "Vous modifiez :"
+  },
+  "editingGlobalHintSites": {
+    "message": "Les sites qui ont leurs propres réglages ne sont pas concernés."
+  },
+  "editingSiteHint": {
+    "message": "Ces réglages ne s’appliquent qu’à ce site."
+  },
+  "extDescription": {
+    "message": "Polices adaptées à la dyslexie, espacements, couleurs et règle de lecture sur tous les sites."
+  },
+  "extName": {
+    "message": "Lisible"
+  },
+  "font": {
+    "message": "Police"
+  },
+  "fontNone": {
+    "message": "Police du site"
+  },
+  "fontScale": {
+    "message": "Taille du texte"
+  },
+  "fontWeight": {
+    "message": "Épaisseur des lettres"
+  },
+  "globalNote": {
+    "message": "a ses propres réglages : ce que vous changez ici ne modifie pas cette page."
+  },
+  "letterSpacing": {
+    "message": "Entre les lettres"
+  },
+  "lineHeight": {
+    "message": "Entre les lignes"
+  },
+  "lineWidth": {
+    "message": "Longueur maximale des lignes"
+  },
+  "linkHighlight": {
+    "message": "Surligner les liens"
+  },
+  "linkHighlightColor": {
+    "message": "Couleur du surlignage"
+  },
+  "linkOutline": {
+    "message": "Encadrer les liens"
+  },
+  "masterOff": {
+    "message": "Désactivé partout"
+  },
+  "masterOn": {
+    "message": "Activé"
+  },
+  "masterSwitch": {
+    "message": "Activer Lisible partout"
+  },
+  "moreSettings": {
+    "message": "Plus de réglages"
+  },
+  "noItalic": {
+    "message": "Supprimer l'italique"
+  },
+  "noSite": {
+    "message": "Page non prise en charge"
+  },
+  "optDefault": {
+    "message": "Inchangé"
+  },
+  "optionsSubtitle": {
+    "message": "réglages"
+  },
+  "optionsTitle": {
+    "message": "Lisible — réglages"
+  },
+  "paragraphSpacing": {
+    "message": "Entre les paragraphes"
+  },
+  "previewItalic": {
+    "message": "Texte en italique"
+  },
+  "previewLink": {
+    "message": "un lien"
+  },
+  "previewText1": {
+    "message": "Le chat dort au soleil près de la fenêtre. Il rêve de longues promenades dans le jardin."
+  },
+  "previewText2": {
+    "message": "Lettres proches : b d p q — 6 9 — on, no."
+  },
+  "recommended": {
+    "message": "Appliquer les valeurs conseillées"
+  },
+  "recommendedHint": {
+    "message": "Valeurs conseillées : espacements élargis, lignes de 70 caractères, fond crème, sans italique. La police est conservée."
+  },
+  "remove": {
+    "message": "Retirer"
+  },
+  "removeHint": {
+    "message": "Ce site suivra à nouveau les réglages de tous les sites."
+  },
+  "reset": {
+    "message": "Réinitialiser"
+  },
+  "resetAll": {
+    "message": "Tout réinitialiser (y compris les sites)"
+  },
+  "resetAllConfirm": {
+    "message": "Confirmer : tout effacer ?"
+  },
+  "resetConfirm": {
+    "message": "Confirmer ?"
+  },
+  "resetTarget": {
+    "message": "Réinitialiser ces réglages"
+  },
+  "rulerBand": {
+    "message": "Bande"
+  },
+  "rulerColor": {
+    "message": "Couleur de la bande"
+  },
+  "rulerHeight": {
+    "message": "Hauteur"
+  },
+  "rulerHint": {
+    "message": "Commune à tous les sites. Elle suit le pointeur, ou le doigt sur téléphone et tablette."
+  },
+  "rulerMask": {
+    "message": "Masque"
+  },
+  "rulerMode": {
+    "message": "Type"
+  },
+  "rulerOpacity": {
+    "message": "Opacité"
+  },
+  "rulerSettings": {
+    "message": "Réglages de la règle"
+  },
+  "sectionAbout": {
+    "message": "À propos"
+  },
+  "sectionColors": {
+    "message": "Couleurs et liens"
+  },
+  "sectionCredits": {
+    "message": "Crédits et licences"
+  },
+  "sectionPreview": {
+    "message": "Aperçu"
+  },
+  "sectionRuler": {
+    "message": "Règle de lecture"
+  },
+  "sectionSites": {
+    "message": "Mes sites"
+  },
+  "sectionSpacing": {
+    "message": "Espacements"
+  },
+  "sectionText": {
+    "message": "Texte et police"
+  },
+  "settingsCommon": {
+    "message": "Communs"
+  },
+  "settingsOwn": {
+    "message": "Propres au site"
+  },
+  "shortcuts": {
+    "message": "Raccourcis clavier (ordinateur)"
+  },
+  "siteCustomize": {
+    "message": "Personnaliser pour ce site"
+  },
+  "siteCustomizeShort": {
+    "message": "Personnaliser"
+  },
+  "siteEnabled": {
+    "message": "Lisible sur ce site"
+  },
+  "siteFollowsGlobal": {
+    "message": "Ce site utilise les réglages de tous les sites."
+  },
+  "siteOffHint": {
+    "message": "Lisible est désactivé sur ce site : il s’affiche tel quel."
+  },
+  "siteOnHint": {
+    "message": "Désactivez pour voir ce site tel quel."
+  },
+  "siteOnTitle": {
+    "message": "Lisible sur"
+  },
+  "siteOwnHint": {
+    "message": "Ces réglages ne s’appliquent qu’à ce site."
+  },
+  "siteOwnTitle": {
+    "message": "Réglages propres à"
+  },
+  "siteRevert": {
+    "message": "Revenir aux réglages de tous les sites"
+  },
+  "sitesEmpty": {
+    "message": "Aucun site particulier pour l'instant. Utilisez l'onglet du site dans la popup pour en ajouter un."
+  },
+  "sitesHint": {
+    "message": "Lisible s'applique à tous les sites. Voici ceux qui sont désactivés ou qui ont leurs propres réglages."
+  },
+  "smaller": {
+    "message": "Plus petit"
+  },
+  "spacing": {
+    "message": "Espacement"
+  },
+  "spacingCustom": {
+    "message": "Espacement ajusté finement dans « Plus de réglages »."
+  },
+  "spacingLarge": {
+    "message": "Large"
+  },
+  "spacingLevel": {
+    "message": "Niveau"
+  },
+  "spacingLevelHint": {
+    "message": "Le niveau règle les quatre premiers curseurs d'un coup ; ajustez-les ensuite si besoin."
+  },
+  "spacingNormal": {
+    "message": "Normal"
+  },
+  "spacingXLarge": {
+    "message": "Très large"
+  },
+  "tabGlobal": {
+    "message": "Tous les sites"
+  },
+  "textAlign": {
+    "message": "Alignement"
+  },
+  "textCase": {
+    "message": "Majuscules / minuscules"
+  },
+  "theme_blue": {
+    "message": "Bleu pâle"
+  },
+  "theme_cream": {
+    "message": "Crème"
+  },
+  "theme_custom": {
+    "message": "Personnalisé"
+  },
+  "theme_dark": {
+    "message": "Sombre"
+  },
+  "theme_green": {
+    "message": "Vert pâle"
+  },
+  "theme_grey": {
+    "message": "Gris"
+  },
+  "theme_none": {
+    "message": "Couleurs du site"
+  },
+  "theme_pink": {
+    "message": "Rose pâle"
+  },
+  "theme_yellow": {
+    "message": "Jaune pâle"
+  },
+  "toastChanged": {
+    "message": "Réglage modifié"
+  },
+  "toastCustomized": {
+    "message": "Réglages propres créés"
+  },
+  "toastOff": {
+    "message": "Lisible désactivé partout"
+  },
+  "toastOn": {
+    "message": "Lisible activé"
+  },
+  "toastReset": {
+    "message": "Réglages par défaut rétablis"
+  },
+  "toastReverted": {
+    "message": "Ce site suit les réglages de tous les sites"
+  },
+  "toastSiteOff": {
+    "message": "Désactivé sur ce site"
+  },
+  "toastSiteOn": {
+    "message": "Activé sur ce site"
+  },
+  "undo": {
+    "message": "Annuler"
+  },
+  "version": {
+    "message": "Version"
+  },
+  "weightBold": {
+    "message": "Grasse"
+  },
+  "weightNormal": {
+    "message": "Normale"
+  },
+  "wordSpacing": {
+    "message": "Entre les mots"
+  }
+}

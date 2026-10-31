@@ -1,0 +1,94 @@
+/*
+ * Popup : en-tête, règle de lecture et onglets fixes en haut, pied fixe en bas ;
+ * seule la zone centrale défile si besoin. Safari dimensionne la popup d'après
+ * son contenu : on fixe une largeur, et une hauteur maximale.
+ */
+body {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  max-width: 100%;
+  max-height: 600px;
+}
+
+/* Sur iPhone / iPad / Android, la popup occupe toute la feuille. */
+@media (pointer: coarse) {
+  body { width: auto; max-height: none; min-height: 100vh; font-size: 16px; }
+}
+
+/* En-tête */
+.top { flex: none; display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: var(--card); border-bottom: 1px solid var(--line); }
+.top img { border-radius: 7px; }
+.top h1 { margin: 0; font-size: 18px; }
+.top .state { flex: 1; text-align: right; font-size: 13px; color: var(--muted); }
+
+/* Règle de lecture */
+/* Commune à tous les sites : toujours en bleu, même pendant l'édition d'un site. */
+.ruler { --accent: var(--global); flex: none; padding: 10px 14px; background: var(--card); border-bottom: 1px solid var(--line); }
+.ruler-head { display: flex; align-items: center; gap: 8px; }
+.ruler-head strong { flex: 1; }
+.ruler-more summary { margin-top: 4px; padding: 4px 0; font-size: 13px; color: var(--muted); cursor: pointer; }
+.ruler-options { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 4px 12px; margin-top: 8px; }
+.ruler-options .segmented { justify-self: start; }
+.ruler-options .mini { justify-self: end; }
+.slider.compact { margin: 0; }
+
+/* Onglets */
+.tabs { flex: none; display: flex; gap: 4px; margin: 10px 14px 0; padding: 3px; background: color-mix(in srgb, var(--line) 70%, transparent); border-radius: 11px; }
+.tabs button {
+  flex: 1; min-height: 38px; padding: 6px; border: 0; border-radius: 8px; background: none;
+  font-weight: 600; font-size: 14px; color: var(--muted); cursor: pointer;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.tabs button[aria-selected="true"] { background: var(--card); color: var(--global); box-shadow: 0 1px 3px rgba(0,0,0,.15); }
+.tabs #tab-site[aria-selected="true"] { color: var(--site); }
+.tabs button:disabled { opacity: .5; cursor: default; }
+
+main { flex: 1; overflow-y: auto; padding: 10px 14px; }
+
+/* Onglet du site */
+.site-banner { padding: 10px 12px; border-radius: 12px; background: var(--site-bg); border: 1px solid var(--site-line); margin-bottom: 10px; }
+.site-row { display: flex; align-items: center; gap: 8px; }
+.site-row strong { flex: 1; color: var(--site); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.site-banner p { margin: 4px 0 0; font-size: 13px; }
+.site-info { padding: 14px; border: 1px dashed var(--site-line); border-radius: 12px; text-align: center; background: var(--card); }
+.site-info p { margin: 0 0 10px; color: var(--muted); }
+.site-info button { width: 100%; }
+
+.note { margin: 0 0 10px; padding: 8px 10px; border-radius: 10px; background: var(--site-bg); border: 1px solid var(--site-line); font-size: 13px; }
+
+/* Réglages simples */
+.controls { display: flex; flex-direction: column; gap: 8px; }
+.line {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  min-height: 52px; padding: 8px 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+}
+.editing-site .line { border-left: 4px solid var(--site); }
+.line > :first-child { font-weight: 600; }
+.line select { max-width: 210px; }
+.controls .font-sample { margin-top: -4px; }
+.controls .hint { margin-top: -4px; padding: 0 4px; }
+
+.stepper { display: inline-flex; align-items: center; gap: 8px; }
+.stepper button {
+  min-width: 44px; min-height: 36px; border: 1px solid var(--line); border-radius: 8px; background: var(--card);
+  font-weight: 700; cursor: pointer;
+}
+.stepper button.bigger { font-size: 18px; }
+.stepper button:disabled { opacity: .4; cursor: default; }
+.stepper output { min-width: 48px; text-align: center; font-variant-numeric: tabular-nums; }
+
+.back { margin: 2px 0 0; text-align: center; }
+
+/* Annuler */
+.toast {
+  flex: none; display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  margin: 0 14px 8px; padding: 6px 12px; border-radius: 10px; background: #2b2b2f; color: #fff; font-size: 13px;
+}
+.toast .link { color: #9ec1ff; }
+
+/* Pied */
+.bottom { flex: none; display: flex; justify-content: space-between; align-items: center; padding: 6px 14px; background: var(--card); border-top: 1px solid var(--line); }
+
+/* Lisible coupé partout : réglages grisés */
+body.off .ruler, body.off .tabs, body.off main { opacity: .45; }

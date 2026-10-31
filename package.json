@@ -1,0 +1,13 @@
+{
+  "name": "lisible",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Extension de navigateur (Safari, Chrome, Firefox ; ordinateur, tablette, téléphone) : polices adaptées à la dyslexie, espacements, couleurs et règle de lecture.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.js",
+    "test:unit": "node --test tests/settings.test.js",
+    "lint:firefox": "node scripts/build.mjs firefox && npx -y web-ext@10.8.0 lint --source-dir dist/firefox"
+  },
+  "license": "PolyForm-Noncommercial-1.0.0"
+}

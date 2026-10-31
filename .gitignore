@@ -1,0 +1,6 @@
+node_modules/
+xcode/
+.DS_Store
+*.xcuserstate
+xcuserdata/
+dist/

@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="optionsTitle">Lisible — réglages</title>
+  <link rel="stylesheet" href="../shared/ui.css">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <header class="bar">
+    <img src="../icons/icon-48.png" alt="" width="32" height="32">
+    <h1><span data-i18n="extName">Lisible</span> <span class="sub" data-i18n="optionsSubtitle">réglages</span></h1>
+    <span class="state" id="master-label"></span>
+    <label class="switch">
+      <input type="checkbox" id="enabled" data-i18n-label="masterSwitch" aria-label="Activer Lisible">
+      <span></span>
+    </label>
+  </header>
+
+  <div class="layout">
+    <nav class="side" aria-label="Sections">
+      <a href="#ruler" data-i18n="sectionRuler">Règle de lecture</a>
+      <a href="#text" data-i18n="sectionText">Texte et police</a>
+      <a href="#spacing" data-i18n="sectionSpacing">Espacements</a>
+      <a href="#colors" data-i18n="sectionColors">Couleurs et liens</a>
+      <a href="#sites" data-i18n="sectionSites">Mes sites</a>
+      <a href="#about" data-i18n="sectionAbout">À propos</a>
+    </nav>
+
+    <main>
+      <!-- Règle de lecture : commune à tous les sites, en premier. -->
+      <section class="card ruler-card" id="ruler">
+        <div class="head">
+          <h2 data-i18n="sectionRuler">Règle de lecture</h2>
+          <label class="switch">
+            <input type="checkbox" data-ruler="enabled" data-i18n-label="sectionRuler" aria-label="Règle de lecture">
+            <span></span>
+          </label>
+        </div>
+        <p class="hint" data-i18n="rulerHint">Commune à tous les sites. Elle suit le pointeur, ou le doigt sur téléphone et tablette.</p>
+        <div data-show-if-ruler>
+          <div class="row">
+            <span data-i18n="rulerMode">Type</span>
+            <span class="segmented" role="radiogroup">
+              <label><input type="radio" name="o-ruler-mode" data-ruler="mode" value="band"><span data-i18n="rulerBand">Bande</span></label>
+              <label><input type="radio" name="o-ruler-mode" data-ruler="mode" value="mask"><span data-i18n="rulerMask">Masque</span></label>
+            </span>
+          </div>
+          <div class="row" data-show-if-band>
+            <label for="o-ruler-color" data-i18n="rulerColor">Couleur de la bande</label>
+            <input type="color" id="o-ruler-color" data-ruler="color">
+          </div>
+          <label class="slider">
+            <span data-i18n="rulerHeight">Hauteur</span>
+            <input type="range" data-ruler="height" min="16" max="200" step="4">
+            <output data-for="height"></output>
+          </label>
+          <label class="slider">
+            <span data-i18n="rulerOpacity">Opacité</span>
+            <input type="range" data-ruler="opacity" min="10" max="90" step="5">
+            <output data-for="opacity"></output>
+          </label>
+        </div>
+      </section>
+
+      <!-- Qui est modifié. -->
+      <div class="target-bar" id="target-bar">
+        <label for="target" data-i18n="editing">Vous modifiez :</label>
+        <select id="target"></select>
+        <span class="hint" id="target-hint"></span>
+      </div>
+
+      <section class="card preview-card" aria-labelledby="preview-title">
+        <h2 id="preview-title" data-i18n="sectionPreview">Aperçu</h2>
+        <div class="pv" id="preview">
+          <p data-i18n="previewText1">Le chat dort au soleil près de la fenêtre. Il rêve de longues promenades dans le jardin.</p>
+          <p><span data-i18n="previewText2">Lettres proches : b d p q — 6 9 — on, no.</span> <em data-i18n="previewItalic">Texte en italique</em> · <a href="#" data-i18n="previewLink" tabindex="-1">un lien</a></p>
+        </div>
+      </section>
+      <style id="preview-style"></style>
+
+      <section class="card" id="text">
+        <h2 data-i18n="sectionText">Texte et police</h2>
+        <div class="row">
+          <label for="o-font" data-i18n="font">Police</label>
+          <select id="o-font" data-key="font"></select>
+        </div>
+        <p class="font-sample" aria-hidden="true">b d p q — Le chat dort au soleil</p>
+        <label class="slider">
+          <span data-i18n="fontScale">Taille du texte</span>
+          <input type="range" data-key="fontScale" min="80" max="200" step="5">
+          <output data-for="fontScale"></output>
+        </label>
+        <div class="row">
+          <label for="o-weight" data-i18n="fontWeight">Épaisseur des lettres</label>
+          <select id="o-weight" data-key="fontWeight">
+            <option value="default" data-i18n="optDefault">Inchangée</option>
+            <option value="normal" data-i18n="weightNormal">Normale</option>
+            <option value="bold" data-i18n="weightBold">Grasse</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="o-align" data-i18n="textAlign">Alignement</label>
+          <select id="o-align" data-key="textAlign">
+            <option value="default" data-i18n="optDefault">Inchangé</option>
+            <option value="left" data-i18n="alignLeft">À gauche</option>
+            <option value="center" data-i18n="alignCenter">Centré</option>
+            <option value="right" data-i18n="alignRight">À droite</option>
+            <option value="justify" data-i18n="alignJustify">Justifié</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="o-case" data-i18n="textCase">Majuscules / minuscules</label>
+          <select id="o-case" data-key="textCase">
+            <option value="default" data-i18n="optDefault">Inchangé</option>
+            <option value="lowercase" data-i18n="caseLower">tout en minuscules</option>
+            <option value="uppercase" data-i18n="caseUpper">TOUT EN MAJUSCULES</option>
+            <option value="capitalize" data-i18n="caseCapitalize">Première Lettre En Majuscule</option>
+          </select>
+        </div>
+        <label class="check"><input type="checkbox" data-key="noItalic"><span data-i18n="noItalic">Supprimer l'italique</span></label>
+      </section>
+
+      <section class="card" id="spacing">
+        <h2 data-i18n="sectionSpacing">Espacements</h2>
+        <div class="row">
+          <span data-i18n="spacingLevel">Niveau</span>
+          <span class="segmented" role="radiogroup">
+            <label><input type="radio" name="o-spacing" value="normal"><span data-i18n="spacingNormal">Normal</span></label>
+            <label><input type="radio" name="o-spacing" value="large"><span data-i18n="spacingLarge">Large</span></label>
+            <label><input type="radio" name="o-spacing" value="xlarge"><span data-i18n="spacingXLarge">Très large</span></label>
+          </span>
+        </div>
+        <p class="hint" data-i18n="spacingLevelHint">Le niveau règle les quatre premiers curseurs d'un coup ; ajustez-les ensuite si besoin.</p>
+        <label class="slider">
+          <span data-i18n="letterSpacing">Entre les lettres</span>
+          <input type="range" data-key="letterSpacing" min="0" max="0.4" step="0.01">
+          <output data-for="letterSpacing"></output>
+        </label>
+        <label class="slider">
+          <span data-i18n="wordSpacing">Entre les mots</span>
+          <input type="range" data-key="wordSpacing" min="0" max="1" step="0.02">
+          <output data-for="wordSpacing"></output>
+        </label>
+        <label class="slider">
+          <span data-i18n="lineHeight">Entre les lignes</span>
+          <input type="range" data-key="lineHeight" min="1" max="3" step="0.1">
+          <output data-for="lineHeight"></output>
+        </label>
+        <label class="slider">
+          <span data-i18n="paragraphSpacing">Entre les paragraphes</span>
+          <input type="range" data-key="paragraphSpacing" min="0" max="3" step="0.25">
+          <output data-for="paragraphSpacing"></output>
+        </label>
+        <label class="slider">
+          <span data-i18n="lineWidth">Longueur maximale des lignes</span>
+          <input type="range" data-key="lineWidth" min="20" max="120" step="5">
+          <output data-for="lineWidth"></output>
+        </label>
+      </section>
+
+      <section class="card" id="colors">
+        <h2 data-i18n="sectionColors">Couleurs et liens</h2>
+        <div class="row top">
+          <span data-i18n="background">Fond</span>
+          <span class="swatches" id="o-themes" role="radiogroup"></span>
+        </div>
+        <div class="customs" id="custom-colors">
+          <label><input type="color" data-key="customText"> <span data-i18n="colorText">Texte</span></label>
+          <label><input type="color" data-key="customBg"> <span data-i18n="colorBg">Fond</span></label>
+          <label><input type="color" data-key="customLink"> <span data-i18n="colorLink">Liens</span></label>
+        </div>
+        <div class="row">
+          <label class="check"><input type="checkbox" data-key="linkHighlight"><span data-i18n="linkHighlight">Surligner les liens</span></label>
+          <input type="color" data-key="linkHighlightColor" id="o-link-color" data-i18n-label="linkHighlightColor" aria-label="Couleur du surlignage">
+        </div>
+        <label class="check"><input type="checkbox" data-key="linkOutline"><span data-i18n="linkOutline">Encadrer les liens</span></label>
+      </section>
+
+      <section class="card actions-card">
+        <button type="button" class="secondary" id="recommended" data-i18n="recommended">Appliquer les valeurs conseillées</button>
+        <button type="button" class="danger" id="reset-target" data-i18n="resetTarget">Réinitialiser ces réglages</button>
+        <p class="hint" data-i18n="recommendedHint">Valeurs conseillées : espacements élargis, lignes de 70 caractères, fond crème, sans italique. La police est conservée.</p>
+      </section>
+
+      <section class="card" id="sites">
+        <h2 data-i18n="sectionSites">Mes sites</h2>
+        <p class="hint" data-i18n="sitesHint">Lisible s'applique à tous les sites. Voici ceux qui sont désactivés ou qui ont leurs propres réglages.</p>
+        <p class="empty" id="sites-empty" data-i18n="sitesEmpty">Aucun site particulier pour l'instant. Utilisez l'onglet du site dans la popup pour en ajouter un.</p>
+        <table id="sites-table">
+          <thead>
+            <tr><th data-i18n="colSite">Site</th><th data-i18n="colLisible">Lisible</th><th data-i18n="colSettings">Réglages</th><th><span class="sr" data-i18n="colActions">Actions</span></th></tr>
+          </thead>
+          <tbody id="sites-body"></tbody>
+        </table>
+      </section>
+
+      <section class="card" id="about">
+        <h2 data-i18n="sectionAbout">À propos</h2>
+        <p><span data-i18n="version">Version</span> <span id="version"></span></p>
+        <h3 data-i18n="shortcuts">Raccourcis clavier (ordinateur)</h3>
+        <ul>
+          <li><kbd>Alt</kbd> + <kbd>Maj</kbd> + <kbd>D</kbd> — <span data-i18n="cmdToggleSite">activer / désactiver sur ce site</span></li>
+          <li><kbd>Alt</kbd> + <kbd>Maj</kbd> + <kbd>R</kbd> — <span data-i18n="cmdToggleRuler">afficher / masquer la règle de lecture</span></li>
+        </ul>
+        <h3 data-i18n="sectionCredits">Crédits et licences</h3>
+        <p class="hint" data-i18n="creditsIntro">Les polices incluses sont distribuées sous SIL Open Font License 1.1.</p>
+        <ul id="credits-list"></ul>
+        <p><button type="button" class="danger" id="reset-all" data-i18n="resetAll">Tout réinitialiser (y compris les sites)</button></p>
+      </section>
+    </main>
+  </div>
+
+  <script src="../shared/settings.js"></script>
+  <script src="../shared/style.js"></script>
+  <script src="../shared/ui.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
